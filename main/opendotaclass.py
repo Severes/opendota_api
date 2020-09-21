@@ -42,7 +42,7 @@ class OpenDota:
             6.  metadata        (https://docs.opendota.com/#tag/metadata%2Fpaths%2F~1metadata%2Fget)
             7.  distributions   (https://docs.opendota.com/#tag/distributions%2Fpaths%2F~1distributions%2Fget)
             8.  search          (https://docs.opendota.com/#tag/search%2Fpaths%2F~1search%2Fget)
-            9. rankings        (https://docs.opendota.com/#tag/rankings%2Fpaths%2F~1rankings%2Fget)
+            9.  rankings        (https://docs.opendota.com/#tag/rankings%2Fpaths%2F~1rankings%2Fget)
             10. benchmarks      (https://docs.opendota.com/#tag/benchmarks%2Fpaths%2F~1benchmarks%2Fget)
             11. status          (https://docs.opendota.com/#tag/status%2Fpaths%2F~1status%2Fget)
             12. health          (https://docs.opendota.com/#tag/health%2Fpaths%2F~1health%2Fget)
