@@ -9,7 +9,7 @@ class OpenDota:
     # 2. Проверить вызов методов:
     # --- 1. heroes()
     # --- 2. matches()
-    # --- 3. job_request()
+    # --- 3. job_request() - также дописать описание метода
 
     token = None
     base_url = 'https://api.opendota.com/api/'
@@ -156,7 +156,7 @@ class OpenDota:
             3.  heroes/{hero_id}/matchups       (https://docs.opendota.com/#tag/heroes%2Fpaths%2F~1heroes~1%7Bhero_id%7D~1matchups%2Fget)
             4.  heroes/{hero_id}/durations      (https://docs.opendota.com/#tag/heroes%2Fpaths%2F~1heroes~1%7Bhero_id%7D~1durations%2Fget)
             5.  heroes/{hero_id}/players        (https://docs.opendota.com/#tag/heroes%2Fpaths%2F~1heroes~1%7Bhero_id%7D~1players%2Fget)
-            6.  heroes/{hero_id}/itemPopularity https://docs.opendota.com/#tag/heroes%2Fpaths%2F~1heroes~1%7Bhero_id%7D~1itemPopularity%2Fget)
+            6.  heroes/{hero_id}/itemPopularity (https://docs.opendota.com/#tag/heroes%2Fpaths%2F~1heroes~1%7Bhero_id%7D~1itemPopularity%2Fget)
         """
         req_list_allowed = ['matches', 'matchups', 'durations', 'players', 'itemPopularity']
         params = {
