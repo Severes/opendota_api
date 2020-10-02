@@ -29,5 +29,26 @@ import config.config as cc
 # h = OpenDota().uni_request('explorer', {'sql': 'select * from leagues where leagueid = 2733'})
 # pprint(h)
 
-i = OD().explorer('select * from leagues where leagueid = 2733')
-pprint(i)
+# i = OD().explorer('select MAX(account_id) from players where steamid = 76561198032345213')
+# pprint(i)
+
+# j = OD().players(cc.lol_what_id)
+# pprint(j)
+
+# i = OD().explorer("select * from notable_players where name = 'Mr.Beans'")
+# pprint(i)
+
+# k = OD().players(cc.lol_what_id, 'totals')
+# pprint(k)
+
+# l = OD().uni_request('distributions')
+# pprint(l)
+
+# consts = OD().constants()
+# pprint(consts)
+
+# records_kills = OD().records('kills')
+# pprint(records_kills)
+
+teams = OD().teams(cc.dark_phoenixes)
+pprint(teams)
