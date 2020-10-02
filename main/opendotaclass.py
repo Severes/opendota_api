@@ -219,8 +219,13 @@ class OpenDota:
         params = self.api_auth_check(params)
         url = '{}explorer'.format(self.base_url)
         response = requests.get(url, params=params)
-        result = response.json()['rows']
-        return result
+
+        try:
+            result = response.json()['rows']
+            return result
+        except:
+            result = response.json()
+            return result
 
     def job_request(self, job_id, req_type='get'):
         """ Функция отправляет запрос на парсинг матча и возвращает результат парсинга матча
@@ -230,7 +235,6 @@ class OpenDota:
             Если GET запрос, то необходимо передать match_id матча, который необходимо распарсить
             Если POST запрос, то необходимо передать job_id
         --- req_type: Выбор типа выполняемого запроса
-        :return:
         """
         url = '{}request/{}'.format(self.base_url, job_id)
         if req_type == 'get':
@@ -239,5 +243,16 @@ class OpenDota:
             response = requests.post(url)
         else:
             return 'Можно выполнять только GET и POST запросы'
+        result = response.json()
+        return result
+
+    def records(self, field_id):
+        """ Функция запрашивает рекорды
+        Описание: ()
+        Параметры:
+        --- field_id: ID параметра, по которому нужно вернуть рекорд
+        """
+        url = '{}records/{}'.format(self.base_url, field_id)
+        response = requests.get(url)
         result = response.json()
         return result
